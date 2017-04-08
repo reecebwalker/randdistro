@@ -1,0 +1,27 @@
+{% assign label = page %}
+
+{% assign releases = site.releases | where: "label_id", label.label_id %}
+
+<section class="page">
+  <h1>{{ label.name }}</h1>
+
+  <p>{{ label.content }}</p>
+
+  <ul>
+    {% for release in releases %}
+    <li>
+      <h1>{{ release.artist }} - {{ release.title }}</h1>
+      <h3>Tracks:</h3>
+      <ul>
+        {% for track in release.tracks %}
+        <li>
+          <p>{{ track.title }}</p>
+          <p>{{ track.preview_url }}</p>
+        </li>
+        {% endfor %}
+      </ul>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+
