@@ -1,0 +1,33 @@
+title: RAND Distribution
+description: "Black Wax Distribution"
+baseurl: ""
+url: "https://reecebwalker.github.io/randdistro"
+
+# Build settings
+markdown: kramdown
+
+collections:
+  labels:
+    # Represents whether to generate pages for the collection items
+    output: true
+  releases:
+    output: false
+
+defaults:
+  - scope:
+      path: ""
+      type: labels
+    values:
+      layout: label
+  - scope:
+      path: ""
+      type: releases
+    values:
+      layout: release
+
+exclude:
+  - "*README.md"
+  - "*.sh"
+  - "package.json"
+  - "node_modules/"
+  - "gulpfile.js"
