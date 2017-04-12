@@ -5,19 +5,18 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>
       {% if page.title %}
-      {{ page.title }} -
+      {{ page.title }} |
       {% endif %}
       {{ site.title }}
     </title>
     <meta name="description" content="{{ site.description }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
 
     <meta property="og:url" content="TODO" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="RAND Distribution" />
+    <meta property="og:title" content="R.A.N.D. Distribution" />
     <meta property="og:description" content="Black Wax Distribution" />
     <meta property="og:image" content="TODO" />
     <link rel="icon" type="image/png" href="TODO" sizes="196x196" />
@@ -25,13 +24,29 @@
     <link rel="icon" type="image/png" href="TODO" sizes="32x32" />
     <link rel="icon" type="image/png" href="TODO" sizes="16x16" />
     <link rel="icon" type="image/png" href="TODO" sizes="128x128" />
+    <link rel="stylesheet" type="text/css" href="{{ '/assets/css/tachyons.min.css' | prepend: site.baseurl }}">
+    <link rel="stylesheet" type="text/css" href="{{ '/css/main.css' | prepend: site.baseurl }}">
   </head>
   <body>
 
-    <div class="content-container">
-      {{ content }}
+    <div class="root">
+
+      <header class="container header-container pa3">
+        {% include header.html %}
+      </header>
+
+      <main class="container content-container">
+        {{ content }}
+      </main>
+
+      <footer class="container footer-container pa3">
+        {% include footer.html %}
+      </footer>
+
     </div>
 
+    <script src="{{ '/js/main.js' | prepend: site.baseurl }}"></script>
+    
     <script>
      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

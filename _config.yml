@@ -1,4 +1,4 @@
-title: RAND Distribution
+title: R.A.N.D. Distribution
 description: "Black Wax Distribution"
 baseurl: ""
 url: "https://reecebwalker.github.io/randdistro"
@@ -6,12 +6,21 @@ url: "https://reecebwalker.github.io/randdistro"
 # Build settings
 markdown: kramdown
 
+permalink: pretty
+
+navigation:
+  - path: "/labels"
+    name: Labels
+  - path: "/releases"
+    name: Releases
+  - path: "/ordering"
+    name: Ordering
+
 collections:
   labels:
-    # Represents whether to generate pages for the collection items
     output: true
   releases:
-    output: false
+    output: true
 
 defaults:
   - scope:

@@ -1,27 +1,19 @@
+---
+layout: default
+---
+
 {% assign label = page %}
 
 {% assign releases = site.releases | where: "label_id", label.label_id %}
 
-<section class="page">
-  <h1>{{ label.name }}</h1>
+<div class="mw8-ns center ph1">
+  {% include heading.html text=label.name %}
 
-  <p>{{ label.content }}</p>
+  <div class="mw6-ns ph2 pb5-ns">
+    {{ label.content }}
+  </div>
 
-  <ul>
-    {% for release in releases %}
-    <li>
-      <h1>{{ release.artist }} - {{ release.title }}</h1>
-      <h3>Tracks:</h3>
-      <ul>
-        {% for track in release.tracks %}
-        <li>
-          <p>{{ track.title }}</p>
-          <p>{{ track.preview_url }}</p>
-        </li>
-        {% endfor %}
-      </ul>
-    </li>
-    {% endfor %}
-  </ul>
-</section>
-
+  <div class="ph2">
+    {% include release-table.html releases=releases %}
+  </div>
+</div>

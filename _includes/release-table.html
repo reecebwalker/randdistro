@@ -1,0 +1,45 @@
+{% assign releases = include.releases %}
+
+<table class="release-table f4 tl w-100 ph2">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Artist</th>
+      <th>Release Date</th>
+      <th>Cat. No.</th>
+      <th class="th--album-art">
+        Album Art
+      </th>
+      <th class="th--details">Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for release in releases %}
+    {% assign album_art = release.album_art | first %}
+    {% assign release_page = release.url | prepend: site.baseurl %}
+    
+    <tr class="mb4 mb4-ns">
+      <td class="pa3" data-th="Title">        
+        <span href="{{ release_page }}">{{ release.title }}</span>
+      </td>
+      <td class="pa3" data-th="Artist">
+        <span href="{{ relese_page }}">{{ release.artist }}</span>
+      </td>
+      <td class="pa3" data-th="Release Date">
+        <span>{{ release.release_date }}</span>
+      </td>
+      <td class="pa3" data-th="Cat. No.">
+        <span>{{ release.catalogue_number }}</span>
+      </td>
+      <td class="pa3 td--album-art" data-th="Album Art">
+        <img class="mw4" alt="Album art" src="{{ album_art.medium }}" />
+      </td>
+      <td class="pa3 td--details" data-th="Details">
+        <a href="{{ release.url | prepend: site.baseurl }}">
+          Details
+        </a>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>

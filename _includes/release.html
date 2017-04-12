@@ -1,0 +1,20 @@
+{% assign release = include.release %}
+{% assign label = site.labels | where: 'label_id', release.label_id | first %}
+
+<article class="release ph1">
+  <div class="release-box">
+    <div class="release-details pa3">
+      <div class="release-details__content">
+        <h1 class="release__title f2">{{ release.title }}</h1>
+        <div class="release__artist f3">{{ release.artist }}</div>
+        <div class="release__label f3">{{ label.name }}</div>
+        <div class="release__release-date f3">{{ release.release_date }}</div>
+      </div>
+    </div>
+  </div>
+  {% for album_art in release.album_art %}
+  <div class="release-box">
+    <img alt="Album art {{ forloop.index0 }}" src="{{ album_art.medium }}"/>
+  </div>
+  {% endfor %}  
+</article>

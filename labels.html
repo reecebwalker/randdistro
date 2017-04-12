@@ -4,12 +4,10 @@ layout: default
 
 {% assign labels = site.labels %}
 
-{% for label in labels %}
+<div class="mw8-ns center ph1">
 
-<ul>
-  <li>
-    <a href="{{ label.url | prepend: site.baseurl }}">{{ label.name }}</a>
-  </li>
-</ul>
+  {% include heading.html text='Labels' %}
 
-{% endfor %}
+  {% include border-grid.html items=labels %}
+
+</div>

@@ -1,0 +1,17 @@
+<nav class="header mw8-ns w-100-ns mb2-ns">
+  <div class="header-content">
+    <a class="logo" href="{{ '/' | prepend: site.baseurl }}"></a>
+    <ul class="nav-main mt3 mt0-ns f4 fw5">
+      {% for link in site.navigation %}
+      <li class="nav-main__item ml5-ns pv2 pv0-ns">
+        <a href="{{ link.path | prepend: site.baseurl }}">
+          {{ link.name }}
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="hamburger dn">
+    ☰
+  </div>
+</nav>

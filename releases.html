@@ -1,0 +1,13 @@
+---
+layout: default
+---
+
+{% assign releases = site.releases %}
+
+<div class="mw8-ns center ph1">
+
+  {% include heading.html text='Releases' %}
+
+  {% include release-table.html releases=releases %}
+
+</div>

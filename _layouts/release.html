@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+{% assign release = page %}
+
+<div class="mw8-ns center ph2 pt3 pt5-ns">
+  {% include release.html release=release %}
+
+  <div class="flex flex-column flex-row-ns">
+    <div class="pt4-ns flex-auto-ns mw6-ns order-1-ns tl">
+      {{ release.content }}
+    </div>
+
+    <div class="flex-auto-ns order-0-ns mw6-ns">
+      <div class="pv4-ns">
+        {% include heading.html text="Tracks" f='3' pns='0' %}
+      </div>
+      
+      {% include track_list.html tracks=release.tracks %}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+{% assign tracks = include.tracks %}
+
+<ul class="track-list">
+  {% for track in tracks %}
+  <li class="track-list__item mb3">
+    {% include audio_player.html %}
+    <span class="f4 ml3">{{ track.title }}</span>
+  </li>
+  {% endfor %}
+</ul>
+
+
