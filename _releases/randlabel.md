@@ -6,6 +6,7 @@ artist: "V/A"
 catalogue_number: rm241216
 release_date: "24.12.16"
 available: yes
+album_art: "https://s3.eu-central-1.amazonaws.com/randdist/Rand-800.jpg"
 tracks:
   - title: "Kassem Mosse - Untitled"
     preview_url: "https://s3.eu-central-1.amazonaws.com/randdist/dunst+cut+up+edit.mp3"
