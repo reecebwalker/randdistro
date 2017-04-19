@@ -1,8 +1,20 @@
 {% assign src = include.src %}
 
-<div class="audio-player">
-  <audio src="{{ track.preview_url }}" >
+<div class="audio-player audio-player--stopped" style="display: none">
+  <audio preload="auto" src="{{ track.preview_url }}" >
     Sorry, your browser does not support audio
   </audio>
-  <button class="audio-player__btn"></button>
+  <div class="audio-player__state audio-player__state--stopped">
+    <button class="audio-player__btn audio-player__btn--play"></button>
+  </div>
+  <div class="audio-player__state audio-player__state--loading">
+    <div class="audio-player__btn audio-player__btn--loading"></div>
+  </div>
+  <div class="audio-player__state audio-player__state--playing">
+    <button class="audio-player__btn audio-player__btn--pause"></button>
+    <div>
+      <button class="audio-player__btn audio-player__btn--reverse"></button>
+      <button class="audio-player__btn audio-player__btn--forward"></button>
+    </div>
+  </div>
 </div>
