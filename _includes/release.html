@@ -1,14 +1,13 @@
 {% assign release = include.release %}
 {% assign label = site.labels | where: 'label_id', release.label_id | first %}
 
-<article class="release ph1">
+<article class="release ph1 lh-title">
   <div class="release-box">
     <div class="release-details pa3">
       <div class="release-details__content">
-        <h1 class="release__title f2">{{ release.title }}</h1>
+        <h1 class="release__title f2 lh-solid">{{ release.title }}</h1>
         <div class="release__artist f3">{{ release.artist }}</div>
         <div class="release__label f3">{{ label.name }}</div>
-        <div class="release__release-date f3">{{ release.release_date }}</div>
       </div>
     </div>
   </div>

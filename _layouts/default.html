@@ -26,16 +26,18 @@
     <link rel="icon" type="image/png" href="TODO" sizes="128x128" />
     <link rel="stylesheet" type="text/css" href="{{ '/assets/css/tachyons.min.css' | prepend: site.baseurl }}">
     <link rel="stylesheet" type="text/css" href="{{ '/css/main.css' | prepend: site.baseurl }}">
+    <script src="https://use.typekit.net/cjn6yvx.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
   </head>
   <body>
 
-    <div class="root">
+    <div class="root page-{{ page.class }}">
 
       <header class="container header-container pa3">
         {% include header.html %}
       </header>
 
-      <main class="container content-container">
+      <main class="container content-container pb5">
         {{ content }}
       </main>
 

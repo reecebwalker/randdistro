@@ -4,18 +4,21 @@ layout: default
 
 {% assign release = page %}
 
-<div class="mw8-ns center ph2 pt3 pt5-ns">
+<div class="mw8-ns mw9-xl center ph2 pt3 pt5-ns">
   {% include release.html release=release %}
 
   <div class="flex flex-column flex-row-ns">
-    <div class="pt4-ns flex-auto-ns mw6-ns order-1-ns tl">
-      {{ release.content }}
+    <div class="flex-auto-ns mw6-ns order-1-ns lh-copy tl">
+
+      {% include heading.html text="Details" f='3' pns='4' %}
+      <div>
+        {{ release.content }}
+      </div>
+      {% include release-detail-table.html release=release %}
     </div>
 
     <div class="flex-auto-ns order-0-ns mw6-ns">
-      <div class="pv4-ns">
-        {% include heading.html text="Tracks" f='3' pns='0' %}
-      </div>
+      {% include heading.html text="Tracks" f='3' pns='4' %}
       
       {% include track_list.html tracks=release.tracks %}
     </div>

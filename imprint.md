@@ -1,4 +1,5 @@
 ---
+layout: information
 ---
 R.A.N.D. MUZIK GbR
 Brandenburger Straße 30

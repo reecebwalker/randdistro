@@ -1,25 +1,29 @@
 ---
 ---
 
-//$rand-blue: #2C1FC7;
-$rand-blue: #12227E;
-$rand-grey: rgba(0, 0, 0, 0.15);
+//$rand-blue: #12227E;
+//$rand-blue: #090C4C;
+//$rand-blue: #0D1160;
+$rand-blue: #070A44;
+$rand-bright-blue: #2C1FC7;
+$rand-grey: rgba(0, 0, 0, 0.10);
 $rand-light-grey: rgba(0, 0, 0, 0.025);
 $rand-border-width: 0.2em;
-$rand-logo-width: 200px;
-$rand-logo-height: 25px;
-$rand-logo-width-ns: 320px;
+$rand-logo-width: 150px;
+$rand-logo-height: 20px;
+$rand-logo-width-ns: 300px;
 $rand-logo-height-ns: 41px;
 $rand-release-size: 15rem;
 $rand-audio-btn-size: 4rem;
 $rand-header-height: 9rem;
 
 html {
-  font-family: "Helvetica", sans-serif;
+  font-family: nimbus-sans, Helvetica, serif;
 }
 
 p {
   margin: 0;
+  margin-bottom: 1.5em;
 }
 
 ul {
@@ -36,14 +40,20 @@ a,
 a:visited,
 a:active,
 a:hover {
-  color: $rand-blue;
+  color: $rand-bright-blue;
   text-decoration: none;
 }
 
 a:hover,
 a:active {
-  border-bottom: $rand-border-width solid $rand-blue;
+  border-bottom: $rand-border-width solid $rand-bright-blue;
   cursor: pointer;
+}
+
+pre {
+  padding: 1rem;
+  display: block;
+  background-color: $rand-light-grey;
 }
 
 .root {
@@ -115,11 +125,33 @@ footer {
   background-size: $rand-logo-width $rand-logo-height;
 }
 
-.index .hero {
-  background-image: url(../images/bg01.png);
-  background-position: 0rem -20rem;
+.page-index {
+  background-image: url(../images/bg02.jpg);
+  background-position: 0rem $rand-header-height;
   background-size: cover;
-  height: $rand-header-height;
+  background-repeat: norepeat;
+  //height: $rand-header-height;
+  //height: 25rem;
+}
+
+.index {
+  color: #fff;
+
+  a {
+    font-weight: 900;
+    font-style: italic;
+    
+    &,
+    &:hover,
+    &:active,
+    &:visited {
+      color: #fff;
+    }
+
+    &:hover {
+      border-bottom: $rand-border-width solid #fff;
+    }
+  }
 }
 
 .release-table {
@@ -149,7 +181,7 @@ footer {
   }
 
   .td--details {
-    text-align: right;
+//    text-align: right;
   }
 }
 
@@ -292,6 +324,19 @@ footer {
   }
 }
 
+.release-detail-table {
+  width: 100%;
+
+  th, td {
+    display: block;
+    clear: both;
+  }
+
+  th {
+    margin-right: 1rem;
+  }
+}
+
 @media screen and (min-width: 30em) {
   .header-container {
     flex: 0 0 $rand-header-height;
@@ -323,6 +368,13 @@ footer {
     width: $rand-logo-width-ns;
     height: $rand-logo-height-ns;
     background-size: $rand-logo-width-ns $rand-logo-height-ns;
+  }
+
+  .release-detail-table {
+    td, th {
+      display: table-cell;
+      clear: none;
+    }
   }
 }
 
@@ -377,5 +429,11 @@ footer {
       width: 50%;
       height: 50%;
     }
+  }
+}
+
+@media screen and (min-width: 96em) {
+  .mw9-xl {
+    max-width: 96rem;
   }
 }

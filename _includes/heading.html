@@ -3,4 +3,6 @@
 {% assign p = include.p | default: '3' %}
 {% assign f = include.f | default: '2' %}
 
-<h1 class="ph1 pv{{ p }} pv{{ pns }}-ns f{{ f }}">{{ heading }}</h1>
+<h1 class="pv{{ p }} pv{{ pns }}-ns f{{ f }}">
+  <span>{{ heading }}</span>
+</h1>

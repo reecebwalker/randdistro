@@ -169,8 +169,8 @@
         return function onTimeUpdate (e) {
           var progress = audio.currentTime / audio.duration
           player.style.backgroundImage = linearGradient(90, [
-            [ 'rgba(0, 0, 0, 0.15)', progress ],
-            [ 'rgba(0, 0, 0, 0.15)', progress ],
+            [ 'rgba(0, 0, 0, 0.10)', progress ],
+            [ 'rgba(0, 0, 0, 0.10)', progress ],
             [ 'rgba(0, 0, 0, 0)', progress ]
           ])
 

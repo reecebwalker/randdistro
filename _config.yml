@@ -28,11 +28,13 @@ defaults:
       type: labels
     values:
       layout: label
+      class: label
   - scope:
       path: ""
       type: releases
     values:
       layout: release
+      class: release-detail
 
 exclude:
   - "*README.md"

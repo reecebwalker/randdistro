@@ -1,0 +1,36 @@
+{% assign release = include.release %}
+
+<table class="release-detail-table">
+  <tbody>
+    <tr class="mb2">
+      <th>Release Date</th>
+      <td>
+        {{ release.release_date }}
+      </td>
+    </tr>
+    <tr>
+      <th>Format</th>
+      <td>
+        {{ release.format }}
+      </td>
+    </tr>
+    <tr>
+      <th>Genre</th>
+      <td>
+        {{ release.genre }}
+      </td>
+    </tr>
+    <tr>
+      <th>Dealer Price</th>
+      <td>
+        {{ release.price }}
+      </td>
+    </tr>
+    <tr>
+      <th>Press Kit</th>
+      <td>
+        <a href="{{ release.press_kit }}" download>Download Zip</a>
+      </td>
+    </tr>
+  </tbody>
+</table>

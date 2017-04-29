@@ -1,5 +1,6 @@
 ---
 layout: index
+class: index
 ---
 Record distribution straight from the factory floor to the record store. Worldwide record distribution - a division of R.A.N.D. Muzik Record Manufacturing. 
 
