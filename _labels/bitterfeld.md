@@ -1,5 +1,5 @@
 ---
 label_id: bitterfeld
-name: Bitterfeld
+name: Bw Bitterfeld
 ---
-New label from idustrial city, Bitterfeld. 
+Label from idustrial city, Bitterfeld specialising in techno, electro and neo-jungle. 
