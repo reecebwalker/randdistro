@@ -10,10 +10,13 @@ permalink: pretty
 
 navigation:
   - path: "/labels"
+    id: labels
     name: Labels
   - path: "/releases"
+    id: releases
     name: Releases
   - path: "/ordering"
+    id: ordering
     name: Ordering
 
 collections:

@@ -6,7 +6,7 @@
     <ul class="nav-main mt3 mt0-ns f4 fw5">
       {% for link in site.navigation %}
       <li class="nav-main__item ml5-ns pv2 pv0-ns">
-        <a href="{{ link.path | prepend: site.baseurl }}">
+        <a id="link-{{link.id}}" href="{{ link.path | prepend: site.baseurl }}">
           {{ link.name }}
         </a>
       </li>
