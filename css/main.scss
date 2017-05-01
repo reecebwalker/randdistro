@@ -17,6 +17,7 @@ $rand-logo-height-ns: 41px;
 $rand-release-size: 15rem;
 $rand-audio-btn-size: 4rem;
 $rand-header-height: 9rem;
+$rand-sticky-header-screen: calc(41px + 2rem);
 
 html {
   font-family: nimbus-sans, Helvetica, sans-serif;
@@ -82,6 +83,7 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  z-index: 100;
 }
 
 header,
@@ -141,7 +143,7 @@ a .icon {
 
 .page-index {
   background-image: url(../images/bg02.jpg);
-  background-position: 0rem $rand-header-height;
+  background-position: 0rem $rand-sticky-header-screen;
   background-size: cover;
   background-repeat: norepeat;
 }
@@ -152,7 +154,7 @@ a .icon {
   a {
     font-weight: 900;
     font-style: italic;
-    
+
     &,
     &:hover,
     &:active,
@@ -333,7 +335,7 @@ a .icon {
 
 .release-detail-table {
   overflow: hidden;
-  
+
   tr {
     width: 50%;
     display: block;
@@ -361,6 +363,17 @@ a .icon {
     flex-direction: row;
   }
 
+  header.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  header.sticky + * {
+    margin-top: $rand-sticky-header-screen;
+  }
+
   .nav-main {
     display: flex;
     flex-direction: row;
@@ -381,13 +394,13 @@ a .icon {
 
   .release-detail-table {
     width: 100%;
-    
+
     tr {
       width: 100%;
       display: table-row;
       float: none;
     }
-    
+
     td, th {
       display: table-cell;
       clear: none;
