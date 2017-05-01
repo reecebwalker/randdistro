@@ -207,11 +207,14 @@ a .icon {
 }
 
 .release {
-  overflow-x: scroll;
-  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
 
   .release-box {
-    display: inline-block;
+    flex: 0 0 auto;
     width: $rand-release-size;
     height: $rand-release-size;
     border: $rand-border-width solid black;
@@ -223,12 +226,14 @@ a .icon {
     }
   }
 
-  .release-details {
+  .release-overview {
     display: flex;
     height: 100%;
     flex-direction: column;
     justify-content: center;
     white-space: normal;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
   }
 }
 
