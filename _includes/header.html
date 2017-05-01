@@ -1,6 +1,8 @@
 <nav class="header mw8-ns mw9-xl w-100-ns mb2-ns">
   <div class="header-content">
-    <a class="logo" href="{{ '/' | prepend: site.baseurl }}"></a>
+    <a class="logo" href="{{ '/' | prepend: site.baseurl }}">
+      {% include icon.html name='logo' %}
+    </a>
     <ul class="nav-main mt3 mt0-ns f4 fw5">
       {% for link in site.navigation %}
       <li class="nav-main__item ml5-ns pv2 pv0-ns">

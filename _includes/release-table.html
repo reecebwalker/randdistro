@@ -1,6 +1,6 @@
 {% assign releases = include.releases %}
 
-<table class="release-table f4 tl w-100 ph2">
+<table class="release-table f4 tl w-100">
   <thead>
     <tr>
       <th>Title</th>
@@ -18,25 +18,29 @@
     {% assign album_art = release.album_art | first %}
     {% assign release_page = release.url | prepend: site.baseurl %}
     
-    <tr class="mb4 mb4-ns">
-      <td class="pa3" data-th="Title">        
+    <tr class="{% unless forloop.last %}mb4{% endunless %}">
+      <td class="pa1 pa3-ns" data-th="Title">        
         <span>{{ release.title }}</span>
       </td>
-      <td class="pa3" data-th="Artist">
+      <td class="pa1 pa3-ns" data-th="Artist">
         <span>{{ release.artist }}</span>
       </td>
-      <td class="pa3" data-th="Release Date">
-        <span>{{ release.release_date }}</span>
+      <td class="pa1 pa3-ns" data-th="Release Date">
+        <span>{{ release.release_date | date: "%d.%m.%y" }}</span>
       </td>
-      <td class="pa3" data-th="Cat. No.">
+      <td class="pa1 pa3-ns" data-th="Cat. No.">
         <span>{{ release.catalogue_number }}</span>
       </td>
-      <td class="pa3 td--album-art" data-th="Album Art">
+      <td class="pa1 pa3-ns td--album-art" data-th="Album Art">
         <img class="mw4" alt="Album art" src="{{ album_art.medium }}" />
       </td>
-      <td class="pa3 td--details" data-th="Details">
-        <a href="{{ release.url | prepend: site.baseurl }}">
+      <td class="pa1 pb3 pa3-ns td--details f3 f5-ns" data-th="Details">
+        <a  href="{{ release.url | prepend: site.baseurl }}">
           Details
+          <!-- <div class="valign">
+               <span class="mr1">Details</span>
+               {% include icon.html name='arrow-right' %}
+               </div> -->
         </a>
       </td>
     </tr>

@@ -1,11 +1,30 @@
 {% assign release = include.release %}
+{% assign label = site.labels | where: 'label_id', release.label_id | first %}
 
 <table class="release-detail-table">
   <tbody>
-    <tr class="mb2">
+    <tr>
+      <th>Title</th>
+      <td>
+        {{ release.title }}
+      </td>
+    </tr>
+    <tr>
+      <th>Artist</th>
+      <td>
+        {{ release.artist }}
+      </td>
+    </tr>
+    <tr>
+      <th>Label</th>
+      <td>
+        {{ label.name }}
+      </td>
+    </tr>
+    <tr>
       <th>Release Date</th>
       <td>
-        {{ release.release_date }}
+        {{ release.release_date | date: "%d.%m.%y" }}
       </td>
     </tr>
     <tr>
@@ -24,6 +43,18 @@
       <th>Dealer Price</th>
       <td>
         {{ release.price }}
+      </td>
+    </tr>
+    <tr>
+      <th>Available</th>
+      <td>
+        {% if release.available %}Yes{% else %}No{% endif %}
+      </td>
+    </tr>
+    <tr>
+      <th>Cat. No.</th>
+      <td>
+        {{ release.catalogue_number }}
       </td>
     </tr>
     <tr>

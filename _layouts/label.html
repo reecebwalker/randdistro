@@ -6,14 +6,12 @@ layout: default
 
 {% assign releases = site.releases | where: "label_id", label.label_id %}
 
-<div class="mw8-ns mw9-xl center ph1">
+<div class="mw8-ns mw9-xl center ph3">
   {% include heading.html text=label.name %}
 
-  <div class="mw6-ns ph2 pb5-ns">
+  <div class="mw6-ns pb5-ns">
     {{ label.content }}
   </div>
 
-  <div class="ph2">
-    {% include release-table.html releases=releases %}
-  </div>
+  {% include release-table.html releases=releases %}
 </div>

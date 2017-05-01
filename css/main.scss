@@ -8,6 +8,7 @@ $rand-blue: #070A44;
 $rand-bright-blue: #2C1FC7;
 $rand-grey: rgba(0, 0, 0, 0.10);
 $rand-light-grey: rgba(0, 0, 0, 0.025);
+$rand-dark-grey: rgba(0, 0, 0, 0.5);
 $rand-border-width: 0.2em;
 $rand-logo-width: 150px;
 $rand-logo-height: 20px;
@@ -18,7 +19,7 @@ $rand-audio-btn-size: 4rem;
 $rand-header-height: 9rem;
 
 html {
-  font-family: nimbus-sans, Helvetica, serif;
+  font-family: nimbus-sans, Helvetica, sans-serif;
 }
 
 p {
@@ -109,8 +110,23 @@ footer {
 
 footer {
   li {
-    display: inline-block;
+    display: block;
   }
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+}
+
+.valign {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+a .icon {
+  fill: $rand-bright-blue;
 }
 
 .hamburger {
@@ -121,8 +137,6 @@ footer {
 .logo {
   width: $rand-logo-width;
   height: $rand-logo-height;
-  background-image: url(../images/logo@2x.png);
-  background-size: $rand-logo-width $rand-logo-height;
 }
 
 .page-index {
@@ -130,8 +144,6 @@ footer {
   background-position: 0rem $rand-header-height;
   background-size: cover;
   background-repeat: norepeat;
-  //height: $rand-header-height;
-  //height: 25rem;
 }
 
 .index {
@@ -178,10 +190,6 @@ footer {
   .th--details,
   .th--album-art {
     opacity: 0;
-  }
-
-  .td--details {
-//    text-align: right;
   }
 }
 
@@ -252,12 +260,6 @@ footer {
   border: $rand-border-width solid black;
   justify-content: center;
   align-items: center;
-  /* background-image: linear-gradient(
-     90deg,
-     $rand-grey 50%,
-     $rand-grey 50%,
-     rgba(0, 0, 0, 0) 50%
-     ); */
 
   .audio-player__state {
     display: none;
@@ -325,15 +327,17 @@ footer {
 }
 
 .release-detail-table {
-  width: 100%;
+  overflow: hidden;
+  
+  tr {
+    width: 50%;
+    display: block;
+    float: left;
+  }
 
   th, td {
     display: block;
     clear: both;
-  }
-
-  th {
-    margin-right: 1rem;
   }
 }
 
@@ -371,6 +375,14 @@ footer {
   }
 
   .release-detail-table {
+    width: 100%;
+    
+    tr {
+      width: 100%;
+      display: table-row;
+      float: none;
+    }
+    
     td, th {
       display: table-cell;
       clear: none;
@@ -402,26 +414,22 @@ footer {
       margin-bottom: 0.5rem;
     }
 
-    tbody td:last-child {
-      margin-bottom: 2rem;
-    }
-
     tbody td:before, td > * {
       flex: 1;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: inherit;
     }
 
     tbody td:before {
       text-align: left;
       content: attr(data-th);
-      color: $rand-grey;
+      color: $rand-dark-grey;
     }
 
     tbody .td--details:before {
-      display: none;
-    }
-
-    tbody .td--details {
-      display: inline-block;
+      opacity: 0;
     }
 
     .td--album-art img {

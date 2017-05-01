@@ -4,7 +4,7 @@ label_id: randmuziklabel
 title: RM241216
 artist: "V/A"
 catalogue_number: rm241216
-release_date: "24.12.16"
+release_date: 2016-12-24
 available: yes
 album_art: 
   - medium: "https://s3.eu-central-1.amazonaws.com/randdist/Rand-800.jpg"
