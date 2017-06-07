@@ -6,6 +6,9 @@ artist: "V/A"
 catalogue_number: RMPICTURE001
 release_date: 2016-06-13
 available: yes
+format: '12" LP' 
+price: 15,00 EUR 
+genre: Electronica/Ambient/Techno
 album_art: 
   - medium: "https://s3.eu-central-1.amazonaws.com/randdist/RAND+LABEL+/custom-Custom_Size___even+smaller+a+side+.jpg"
   - medium: "https://s3.eu-central-1.amazonaws.com/randdist/RAND+LABEL+/Smaller+for+website+B+SIDE+.jpg"
