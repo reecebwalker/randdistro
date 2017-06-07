@@ -27,4 +27,5 @@ tracks:
   - title: "B4 Panthera Krause - Blinded"
     preview_url: "https://s3.eu-central-1.amazonaws.com/randdist/RAND+LABEL+/B4+Panthera+Krause+-+Blinded+-+Snippet.mp3"
 ---
+Leipzig’s R.A.N.D. Muzik put together a limited edition compilation LP for reflective home listening (and viewing) to demonstrate their new picture disc press. Featuring Lowtec, Consulate and Leipzig locals Panthera Krause and Leibniz to name just a few, over its 8 tracks the collection moves from melody-driven IDM to dark, atmospheric ambience, through to reflective electronica. Skilfully pressed on two sides of 12” plastic with artwork by Marijn Degenaar this is surely a must-have for every sensible record collector.
 
