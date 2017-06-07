@@ -1,10 +1,10 @@
 ---
 release_id: rm241216repress
 label_id: randmuziklabel
-title: RM241216
+title: R.M. PICTURE 001
 artist: "V/A"
-catalogue_number: rm241216
-release_date: 2016-12-24
+catalogue_number: RMPICTURE001
+release_date: 2016-06-13
 available: yes
 album_art: 
   - medium: "https://s3.eu-central-1.amazonaws.com/randdist/Rand-800.jpg"
