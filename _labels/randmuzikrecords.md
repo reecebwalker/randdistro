@@ -1,5 +1,5 @@
 ---
 label_id: randmuziklabel
-name: Rand Muzik 
+name: R.A.N.D. Muzik Recordings 
 ---
-We don't just press the wax 
+
