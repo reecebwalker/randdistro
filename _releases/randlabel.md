@@ -7,8 +7,8 @@ catalogue_number: RMPICTURE001
 release_date: 2016-06-13
 available: yes
 album_art: 
-  - medium: "https://s3.eu-central-1.amazonaws.com/randdist/Rand-800.jpg"
-  - medium: "https://s3.eu-central-1.amazonaws.com/randdist/Rand-800.jpg"
+  - medium: "https://s3.eu-central-1.amazonaws.com/randdist/RAND+LABEL+/custom-Custom_Size___even+smaller+a+side+.jpg"
+  - medium: ""
 tracks:
   - title: "Kassem Mosse - Untitled"
     preview_url: "https://s3.eu-central-1.amazonaws.com/randdist/dunst+cut+up+edit.mp3"
